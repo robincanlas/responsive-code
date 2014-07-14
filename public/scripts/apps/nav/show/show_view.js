@@ -5,7 +5,7 @@ define([
 
 	App.module("NavApp.Show", function(Show, App, Backbone, Marionette, $, _){
 	
-		Show.Layout = Marionette.Layout.extend({
+		Show.Layout = Marionette.LayoutView.extend({
 			template: LayoutTemplate,
 			tagName: "nav",
 			regions: {

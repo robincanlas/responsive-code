@@ -10,7 +10,7 @@ define([
 	BrandsFilterTemplate, PriceFilterTemplate){
 
 	App.module("MarketplaceApp.Show", function(Show, App, Backbone, Marionette, $, _){
-		Show.Layout = Marionette.Layout.extend({
+		Show.Layout = Marionette.LayoutView.extend({
 			template: LayoutTemplate,
 			regions: {
 				itemRegion: "#item-region",

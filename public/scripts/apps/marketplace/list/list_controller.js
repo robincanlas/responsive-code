@@ -8,7 +8,7 @@ define([
 			Show.Controller = Marionette.Controller.extend({
 		
 					initialize: function(options){
-
+						console.log("marketplace");
 						this.layout = this.getLayoutView();
 						this.collection = App.request("product:entities:marketplace");
 
