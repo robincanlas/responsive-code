@@ -12,7 +12,7 @@ define([
 	App.module("DialogApp.Swap", function(Swap, App, Backbone, Marionette, $, _){
 		
 		/* --Layout-- */
-		Swap.Layout = Marionette.Layout.extend({
+		Swap.Layout = Marionette.LayoutView.extend({
 			template: SwapTemplate,
 			regions: {
 				swapHeader: "#swap-header",
@@ -57,7 +57,7 @@ define([
 
 
 		/* --Swap Layout-- */
-		Swap.Collections = Marionette.Layout.extend({
+		Swap.Collections = Marionette.LayoutView.extend({
 			template: SwapCollectionViewTemplate,
 			className: "main-container",
 			regions: {
@@ -110,7 +110,7 @@ define([
 		});
 
 		Swap.CollectionSeller = Marionette.CollectionView.extend({
-			itemView: Swap.Seller,
+			childView: Swap.Seller,
 			className: "seller-main",
 			tagName: "ul",
 		});
@@ -148,7 +148,7 @@ define([
 		});
 		
 		Swap.CollectionTrader = Marionette.CollectionView.extend({
-			itemView: Swap.Trader,
+			childView: Swap.Trader,
 			className: "trader-main",
 			tagName: "ul",
 			// events:{

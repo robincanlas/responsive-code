@@ -11,7 +11,7 @@ define([
 		dialogRegion:"#dialog-region"
 	});
 
-	App.on("initialize:before", function(){
+	App.on("before:start", function(){
 		require(["config/settings"]);
 	});
 
@@ -25,7 +25,7 @@ define([
 		});
 	});
 
-	App.on("initialize:after", function() {
+	App.on("before:start", function() {
 		if (Backbone.history) {
 			require([
 				"apps/marketplace/marketplace_app",							

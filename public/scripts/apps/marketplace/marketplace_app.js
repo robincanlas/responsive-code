@@ -12,10 +12,9 @@ define([
 		
 		var API = {
 			showMarket: function(){
-				// require(["apps/marketplace/list/list_controller"], function(){
-					console.log("marketplace app");
-					// new MarketplaceApp.Show.Controller();
-				// });
+				require(["apps/marketplace/list/list_controller"], function(){
+					new MarketplaceApp.Show.Controller();
+				});
 			},
 		};
 		

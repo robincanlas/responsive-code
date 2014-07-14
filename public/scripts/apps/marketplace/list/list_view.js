@@ -19,7 +19,7 @@ define([
 		});
 
 		/*-- Sub-layout to contain all the filter itemviews --*/
-		Show.SidebarLayout = Marionette.Layout.extend({
+		Show.SidebarLayout = Marionette.LayoutView.extend({
 			template: SidebarTemplate,
 			regions: {
 				tagsFilterRegion: "#tags-filter",
@@ -32,12 +32,16 @@ define([
 		Show.Item = Marionette.ItemView.extend({
 			template: ProductTemplate,
 			triggers: {
-				"click [data-image],[data-name],[data-user]":"show:dialog",
-				"click [data-button]": "click:price:buy"
+				"click [data-buy]": "click:price:buy"
 			},
 			events: {
 				"mouseover" : "itemShadow",
 				"mouseout" : 'shadowDelete',
+				"click .uniq":"showDialog",
+			},
+			showDialog: function(){
+				console.log("click!");
+				this.trigger('show:dialog', this.model);
 			},
 			templateHelpers:{
 				userTooltip: function(){
@@ -52,7 +56,7 @@ define([
 			}
 		});
 		Show.Products = Marionette.CollectionView.extend({
-			itemView: Show.Item,
+			childView: Show.Item,
 		});
 		
 
@@ -154,7 +158,7 @@ define([
 
 		Show.BrandsFilter = Marionette.CompositeView.extend({
 			template: BrandsFilterTemplate,
-			itemView: Show.Brand,
+			childView: Show.Brand,
 			itemViewContainer: "#brands-list",
 		});
 		// End of refactored BrandFilter Code

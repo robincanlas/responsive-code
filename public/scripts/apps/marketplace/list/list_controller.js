@@ -8,7 +8,6 @@ define([
 			Show.Controller = Marionette.Controller.extend({
 		
 					initialize: function(options){
-						console.log("marketplace");
 						this.layout = this.getLayoutView();
 						this.collection = App.request("product:entities:marketplace");
 
@@ -21,14 +20,15 @@ define([
 
 						App.mainRegion.show(this.layout);
 						this.listenTo(this.products, "itemview:click:price:buy", this.buySelectedProduct);
-						this.listenTo(this.products, "itemview:show:dialog", this.showDialog);
+
 					},
 
 					/* Creates a vent trigger that will be listen by the dialog_app
-						to open the dialog layout
+						to open the dialog layout 
 					 */ 
 					showDialog: function(iv){
-						App.vent.trigger("dialog:show:dialog", {model: iv.model});
+						console.log("show dialog");
+						// App.vent.trigger("dialog:show:dialog", {model: iv.model});
 					},
 
 					/* itemview triggers buy */
@@ -81,6 +81,7 @@ define([
 					//collectionView & listener
 					itemRegion: function(){
 						this.products = this.getItemfromView();
+						this.listenTo(this.products, "itemview:show:dialog", this.showDialog);
 						this.layout.itemRegion.show(this.products);
 
 					},
