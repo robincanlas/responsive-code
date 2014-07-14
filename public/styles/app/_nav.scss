@@ -1,5 +1,79 @@
+// Desktop
 @media only screen 
 and (min-width : 1024px) {
+/* Styles */
+	ul.smartphone-display {
+		display:none;
+	}	
+	.header {
+		line-height: 55px;
+		height: 55px;
+		padding:0 20px;
+		width: 100%;
+		color: white;
+		.row {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 0;
+			margin-bottom: 0;
+			max-width: 62.5rem;	
+			.list-style {
+				list-style-type: none;
+				text-decoration: none;
+			}
+
+			ul.left {
+				float: left;
+				li a{
+					@extend .list-style;
+				}
+			}
+
+			ul.right {
+				@extend .list-style;
+				float: right;
+				li {
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	nav {
+		line-height: 40px;
+		height: 40px;
+		padding: 0 20px;
+		background-color: $dark;
+		.list-style {
+			list-style-type: none;
+			text-decoration: none;
+			margin-top: 0px;
+		}
+		ul.left {
+			float: left;
+			@extend .list-style;
+			li{
+				@extend .list-style;
+				a{
+					@extend .list-style;	
+				}
+			}
+		}
+		ul.right {
+			@extend .list-style;
+			float: right;
+			li {
+				display: inline-block;
+			}
+		}
+	}
+
+}
+
+// Ipads & Tablets
+@media only screen 
+and (max-device-width : 768px) {
 /* Styles */
 	.header {
 		line-height: 55px;
@@ -14,6 +88,26 @@ and (min-width : 1024px) {
 			margin-top: 0;
 			margin-bottom: 0;
 			max-width: 62.5rem;
+			.list-style {
+				list-style-type: none;
+				text-decoration: none;
+			}
+
+			ul.left {
+				float: left;
+				li a{
+					@extend .list-style;
+				}
+			}
+
+			ul.right {
+				padding-left: 0px;
+				@extend .list-style;
+				float: right;
+				li {
+					display: inline-block;
+				}
+			}
 		}
 	}
 
@@ -22,20 +116,89 @@ and (min-width : 1024px) {
 		height: 40px;
 		padding: 0 20px;
 		background-color: $dark;
+		.list-style {
+			list-style-type: none;
+			text-decoration: none;
+			margin-top: 0px;
+		}
+		ul.left {
+			float: left;
+			@extend .list-style;
+			li{
+				@extend .list-style;
+				a{
+					@extend .list-style;	
+				}
+			}
+		}
+		ul.right {
+			@extend .list-style;
+			float: right;
+			li {
+				display: inline-block;
+			}
+		}
 	}
 }
 
-
+// Smartphones
 @media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
+and (max-width : 320px) {
 /* Styles */
-	.header {
-		line-height:40px;	
-		height:40px;
-		padding:0 20px;
-		background-color:white;
-		width: 100%;
+	.header{
+		ul.left, .right {
+			display: none;
+		}
+		nav.smartphone-display {
+			display:inline;
+		}		
 	}
+
+	nav {
+		line-height: 40px;
+		height: 40px;
+		padding: 0 20px;
+		background-color: $dark;
+	}
+
+	ul.smartphone-display {
+	background-color: white;
+	}
+
+	#navbar {
+	   margin: 0;
+	   padding: 0;
+	   height: 1em; }
+	#navbar li {
+	   list-style: none;
+	   float: left; }
+	#navbar li a {
+	   display: block;
+	   padding: 3px 8px;
+	   background-color: white;
+	   color: black;
+	   text-decoration: none; }
+	#navbar li ul {
+	   display: none; 
+	   width: 10em;
+	   background-color: #69f;
+	}
+	#navbar li:hover ul, #navbar li.hover ul {
+	   display: block;
+	   position: absolute;
+	   margin: 0;
+	   padding: 0; 
+	}
+	#navbar li:hover li, #navbar li.hover li {
+	   float: none; 
+	}
+	#navbar li:hover li a, #navbar li.hover li a {
+	   background-color: white;
+	   border-bottom: 1px solid #fff;
+	   color: black; 
+	}
+	#navbar li li a:hover {
+	   background-color: #8db3ff; 
+	}	
+
 }
