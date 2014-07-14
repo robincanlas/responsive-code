@@ -32,16 +32,12 @@ define([
 		Show.Item = Marionette.ItemView.extend({
 			template: ProductTemplate,
 			triggers: {
-				"click [data-buy]": "click:price:buy"
+				"click [data-image],[data-name],[data-user]":"show:dialog",
+				"click [data-button]": "click:price:buy"
 			},
 			events: {
 				"mouseover" : "itemShadow",
 				"mouseout" : 'shadowDelete',
-				"click .uniq":"showDialog",
-			},
-			showDialog: function(){
-				console.log("click!");
-				this.trigger('show:dialog', this.model);
 			},
 			templateHelpers:{
 				userTooltip: function(){

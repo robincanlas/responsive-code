@@ -27,8 +27,7 @@ define([
 						to open the dialog layout 
 					 */ 
 					showDialog: function(iv){
-						console.log("show dialog");
-						// App.vent.trigger("dialog:show:dialog", {model: iv.model});
+						App.vent.trigger("dialog:show:dialog", {model: iv.model});
 					},
 
 					/* itemview triggers buy */
@@ -81,7 +80,7 @@ define([
 					//collectionView & listener
 					itemRegion: function(){
 						this.products = this.getItemfromView();
-						this.listenTo(this.products, "itemview:show:dialog", this.showDialog);
+						this.listenTo(this.products, "childview:show:dialog", this.showDialog);
 						this.layout.itemRegion.show(this.products);
 
 					},
