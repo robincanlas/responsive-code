@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Runner</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="libs/mocha.css">
+</head>
+<body>
+	<!-- Following test patterns from https://github.com/rmurphey/srchr-demo -->
+	<div id="mocha"></div>
+	<div id="test"></div>
+	<div id="test-dialog"></div>
+
+	<!-- <script src="spec/apps/dialog.js"></script> -->
+	<script src="libs/mocha.js"></script>
+	<script src="libs/chai.js"></script>
+	<script src="libs/sinon-1.10.2.js"></script>
+
+	<script>
+		var expect = chai.expect;
+		mocha.setup('bdd');
+	</script>
+
+	<script data-main="../public/scripts/main" src="../public/scripts/libs/require/require.js"></script>
+
+
+</body>
+</html>

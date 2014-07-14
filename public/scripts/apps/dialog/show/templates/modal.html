@@ -1,0 +1,46 @@
+<div class="row">
+
+    <div class="large-13 columns">
+        <img data-image id="image" src="<%= image%>" class="dialog-image">
+    </div>
+   
+    <div class="large-11 columns">
+        <%= brand %>
+        <p>
+        <%= name %>
+   
+        <div class="row">
+            <div class="large-24 columns">
+                <img src="https://secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf?s=34&r=pg&d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2F%2Fimg%2Favatar.png" alt="">
+
+                <img src="https://secure.gravatar.com/avatar/b45c48fc9e05922e2f368a9d7d7d8de1?s=34&r=pg&d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2F%2Fimg%2Favatar.png" alt="">
+
+                <img src="https://secure.gravatar.com/avatar/adb9cc17930b20ab1162918d97b755c9?s=34&r=pg&d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2F%2Fimg%2Favatar.png" alt="">
+            
+                <span style="font-size:13px; word-wrap:normal;">and 300 others Recommend this</span>
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="large-24 columns">
+                <div style="background-color:#ccc; height:1px; width:auto; margin-bottom:10px;"></div>
+            </div>
+        </div>    
+      
+        <div class="row">
+            <div class="large-24 columns"> 
+                <img src="https://secure.gravatar.com/avatar/5b2b185c814bb25f2f95a1152e58f033?s=34&r=pg&d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2F%2Fimg%2Favatar.png" alt="">   
+                <%= userTooltip()%> is selling this for <%= price %>$
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="large-24 columns">
+                <button data-buy class="buyButton" id="buy">Buy from <%= user %></button>
+                <button data-swap class="swapButton" id="swap">Request a swap</button>
+            </div>
+        </div>
+    </div>            
+</div>

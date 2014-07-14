@@ -1,0 +1,14 @@
+# Cache directories
+Thumbs.db
+*.DS_Store
+*.empty
+.sass-cache/
+
+# Components
+node_modules/
+bower_components/
+
+# Unminified code
+.tmp/
+
+sftp-config.json

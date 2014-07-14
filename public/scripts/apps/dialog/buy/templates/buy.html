@@ -1,0 +1,65 @@
+<div class="row">
+
+	<div class="large-12 columns">
+		<button class="process" disabled>Processing<span id="word"></span></button>
+		
+		<br>
+		<br>
+		<div class="row">
+			<div class="large-24 columns">
+				<span style="font-size:23px;">You are buying <%= name %> for <%= price %>$</span>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-24 columns">
+				<img class="dialogBuy-image" src="<%=image%>" alt="" style="max-width:500px; max-height:500px;">
+			</div>
+		</div>
+
+	</div>
+		
+
+	<div class="large-12 columns">
+		<div class="large-14 columns">
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<form action="">
+				<div class="row">
+					<input type="text">
+				</div>
+
+				<div class="row">
+					
+					<div class="large-5 column">
+						<select name="" id="">
+							<%=expirationDateMonth()%>
+						</select>
+					</div>
+
+					<div class="large-5 column">
+						<select name="" id="">
+							<%= expirationDateYear()%>
+						</select>
+					</div>
+					
+					<div class="large-4 column">
+						<input type="text">
+					</div>
+				
+				</div>
+
+				<div class="row">
+					<button class='buyButton'><img src="images/ok_icon.png" alt=""> CONFIRM PURCHASE</button>
+					<button class='cancelButton' data-cancel id="cancel">CANCEL</button>
+				</div>
+				
+			</form>
+		</div>
+	</div>	
+</div>
+	

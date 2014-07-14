@@ -1,0 +1,14 @@
+{
+  "name": "perfectbeauty-www",
+  "version": "2.0.0",
+  "private": true,
+  "devDependencies": {
+    "jquery": "~2.1.1",
+    "lodash": "~2.4.1",
+    "backbone": "~1.1.2",
+    "marionette": "~2.0.2",
+    "requirejs": "~2.1.14",
+    "text": "~2.0.12",
+    "modernizr": "~2.8.3"
+  }
+}
