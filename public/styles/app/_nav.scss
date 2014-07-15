@@ -6,8 +6,7 @@ ul {
 
 // Desktop
 @media only screen
-and (max-width : 1824px) 
-and (min-width : 769px) {
+and (min-width : 1024px) {
 /* Styles */
 	ul.smartphone-display {
 		display:none;
@@ -93,8 +92,8 @@ and (min-width : 769px) {
 
 // Ipads & Tablets
 @media only screen 
-and (max-width : 768px)
-and (min-width : 321px) {
+and (max-width : 1024px)
+and (min-width : 640px) {
 /* Styles */
 	ul.smartphone-display {
 		display:none;
@@ -175,7 +174,7 @@ and (min-width : 321px) {
 
 // Smartphones
 @media only screen 
-and (max-width : 320px) {
+and (max-width : 640px) {
 /* Styles */
 
 	.row-wrapper {
