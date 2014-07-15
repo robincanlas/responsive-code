@@ -2,6 +2,8 @@ ul {
 	padding: 0px;
 }
 
+@import 'app/global';
+
 // Desktop
 @media only screen
 and (max-width : 1824px) 
@@ -65,6 +67,8 @@ and (min-width : 769px) {
 			list-style-type: none;
 			text-decoration: none;
 			margin-top: 0px;
+			display: inline;
+			padding-right: 11px;
 		}
 		ul.left {
 			float: left;
@@ -211,39 +215,39 @@ and (max-width : 320px) {
 	background-color: white;
 	}
 
-	#navbar {
+	.navbar {
 	   margin: 0;
 	   padding: 0;
 	   height: 1em; }
-	#navbar li {
+	.navbar li {
 	   list-style: none;
 	   float: left; }
-	#navbar li a {
+	.navbar li a {
 	   display: block;
-	   padding: 3px 8px;
+	   // padding: 3px 8px;
 	   background-color: $dark;
 	   color: white;
 	   text-decoration: none; }
-	#navbar li ul {
+	.navbar li ul {
 	   display: none; 
 	   width: 10em;
 	   background-color: #69f;
 	}
-	#navbar li:hover ul, #navbar li.hover ul {
+	.navbar li:hover ul, .navbar li.hover ul {
 	   display: block;
 	   position: absolute;
 	   margin: 0;
 	   padding: 0; 
 	}
-	#navbar li:hover li, #navbar li.hover li {
+	.navbar li:hover li, .navbar li.hover li {
 	   float: none; 
 	}
-	#navbar li:hover li a, #navbar li.hover li a {
+	.navbar li:hover li a, .navbar li.hover li a {
 	   background-color: $dark;
 	   border-bottom: 1px solid #fff;
 	   color: white; 
 	}
-	#navbar li li a:hover {
+	.navbar li li a:hover {
 	   background-color: #8db3ff; 
 	}	
 
