@@ -31,6 +31,7 @@ define([
 		/*--Collection View for Product--*/
 		Show.Item = Marionette.ItemView.extend({
 			template: ProductTemplate,
+			tagName: "li",
 			triggers: {
 				"click [data-image],[data-name],[data-user]":"show:dialog",
 				"click [data-button]": "click:price:buy"
