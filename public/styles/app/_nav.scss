@@ -137,8 +137,8 @@ and (min-width : 321px) {
 				@extend .list-style;
 				float: right;
 				li {
-					margin: 0px 3px 0px 2px;
-					padding-left: 4px;
+					margin: 0;
+					padding: 0;
 					display: inline-block;
 				}
 			}
@@ -221,17 +221,23 @@ and (max-width : 320px) {
 	   height: 1em; }
 	.navbar li {
 	   list-style: none;
-	   float: left; }
+	   float: left; 
+	}
 	.navbar li a {
 	   display: block;
 	   // padding: 3px 8px;
 	   background-color: $dark;
 	   color: white;
-	   text-decoration: none; }
+	   text-decoration: none; 
+	}
 	.navbar li ul {
 	   display: none; 
 	   width: 10em;
 	   background-color: #69f;
+	   li {
+		   padding: 0;
+		   margin: 0;
+	   }
 	}
 	.navbar li:hover ul, .navbar li.hover ul {
 	   display: block;
